@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundshower"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/butDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="228dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="Botao deletar"
+        android:onClick="deletarEstados"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvcreme"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <Button
+        android:id="@+id/buttonalt"
+        android:layout_width="324dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="monospace"
+        android:text="Creme"
+        android:textSize="34sp"
+        app:icon="@drawable/futabao7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/butsalv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="#E91E63"
+        android:onClick="salvarStado"
+        android:text="Salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvcreme" />
+
+    <LinearLayout
+        android:id="@+id/linsemana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvdom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="D"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="48sp" />
+
+
+        <TextView
+            android:id="@+id/tvseg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="S"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/tvter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="T"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/tvqua"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Q"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/tvqui"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Q"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/tvsex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="S"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/tvsab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="S"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="48sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvcreme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_view_text"
+        android:fontFamily="sans-serif"
+        android:shadowColor="#838383"
+        android:shadowDx="-5"
+        android:shadowDy="5"
+        android:shadowRadius="3"
+        android:text="Nada"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linsemana"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/circle_dom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="250dp" />
+
+        <ImageView
+            android:id="@+id/circle_seg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="250dp" />
+
+        <ImageView
+            android:id="@+id/circle_ter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="250dp" />
+
+        <ImageView
+            android:id="@+id/circle_qua"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="250dp" />
+
+        <ImageView
+            android:id="@+id/circle_qui"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="250dp" />
+
+        <ImageView
+            android:id="@+id/circle_sex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="250dp" />
+
+        <ImageView
+            android:id="@+id/circle_sab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="250dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvProxCreme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="68dp"
+        android:text="Creme"
+        android:textColor="#640575"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTextoProxi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="20dp"
+        android:text="Proximo creme:"
+        android:textColor="#640575"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvProxCreme"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchOntem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="196dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvcreme" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
