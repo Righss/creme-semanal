@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
 
         editor.apply()
 
-        //Inicializa as variaveiss
+        //Inicializa as variaveis
 
         buttonalt = findViewById(R.id.buttonalt)
         butsalv = findViewById(R.id.butsalv)
